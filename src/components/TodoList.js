@@ -1,5 +1,6 @@
 import React from "react";
 import style from "./TodoList.css";
+import PropTypes from "prop-types";
 
 const TodoList = props => {
   const list = props.items.map(element => {
@@ -19,7 +20,8 @@ const TodoList = props => {
 };
 
 TodoList.propTypes = {
-  items: propTypes.array.isRequired
+  items: PropTypes.array.isRequired,
+  remove: PropTypes.func.isRequired
 };
 
 export default TodoList;
